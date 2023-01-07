@@ -13,7 +13,7 @@ pd.set_option('display.width', 1000)
 
 # load data
 df = pd.read_csv('data/cleaned_data/bank-full-ready.csv', index_col='Unnamed: 0')
-
+print(df.info())
 # Feature and target
 X = df.drop(columns='y')
 y = df['y']
