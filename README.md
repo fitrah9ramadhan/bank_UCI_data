@@ -7,7 +7,8 @@ Metadata: data/bank-names.txt
 ---
 Algorithm	: Decision Tree
 Accuracy with 10 Fold Cross Validation:
-**Fold**:**Accuracy**
+
+**Fold**    : **Accuracy**
 
 Fold - 1: 0.89
 
