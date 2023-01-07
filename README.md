@@ -5,21 +5,17 @@ Data Source: https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
 Metadata: data/bank-names.txt
 
 ---
-
-![Age Histogram !](/figure/age_histogram.png)
-
-![Count Job Status !](/figure/number_of_by_job.png)
-
-![Count Marital Status !](/figure/number_of_by_marital_status.png)
-
-![Count Housing Loan !](/figure/number_of_by_housing_loan.png)
-
-![Count Personal Loan !](/figure/number_of_by_personal_loan.png)
-
-## Related to The Campaign
-
-![Contact Type !](/figure/number_of_by_contact_used.png)
-
-![Target !](/figure/number_of_by_y.png)
-
-![Poutcome !](/figure/number_of_by_poutcome.png)
+Algorithm	: Decision Tree
+Accuracy with 10 Fold Cross Validation:
+**Fold**:**Accuracy**
+Fold - 1: 0.89
+Fold - 2: 0.81
+Fold - 3: 0.62
+Fold - 4: 0.7
+Fold - 5: 0.71
+Fold - 6: 0.62
+Fold - 7: 0.72
+Fold - 8: 0.53
+Fold - 9: 0.53
+Fold - 10: 0.57
+Average Accuracy:  0.67
