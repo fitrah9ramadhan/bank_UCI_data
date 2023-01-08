@@ -46,11 +46,17 @@ new_df = remove_outliers(data=df, threshold=3)
 
 # Min Max Scaler for high Scaled Data
 numerical_col = [col for col in new_df.columns if ((new_df[col].dtype == 'float64') or (new_df[col]).dtype == 'int64')]
-to_scale_cols = [col for col in numerical_col if (len(new_df[col].unique()) >= len(new_df[col])*0.01)] # scale if the number of unique value is greater or equal than the length of the rows
+to_scale_cols = [col for col in numerical_col if (len(new_df[col].unique()) >= len(new_df[col])*0.01)] # scale if the number of unique value is greater or equal than 1 percent of the length of the rows
 
 scaler = MinMaxScaler()
 scaled = scaler.fit(new_df[to_scale_cols])
 new_df[to_scale_cols] = scaled.transform(new_df[to_scale_cols])
+
+# Binning Numerical Variabel
+for col in to_scale_cols:
+	new_df[col] = pd.cut(x=new_df[col], bins=5, labels=[1, 2, 3, 4, 5])
+	new_df[col] = new_df[col].astype('int')
+
 
 # Categorical Cols
 
@@ -95,13 +101,10 @@ ordinal_cols = pd.DataFrame(data=ordinal_encoder.fit_transform(new_df[high_cardi
 							index=new_df[high_cardinality_cols].index, 
 							columns=high_cardinality_cols)
 
-new_df[high_cardinality_cols] = ordinal_cols
+new_df[high_cardinality_cols] = ordinal_cols.astype('int')
+
 # Low Cardinality Cols -> One Hot Encoding
 new_df = pd.get_dummies(new_df)
 
-# print(new_df.info())
-# print(new_df.describe())
-# print(new_df.shape)
-
-# # Save new_df
+# Save new_df
 new_df.to_csv("data/cleaned_data/bank-full-ready.csv")
