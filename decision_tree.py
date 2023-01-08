@@ -4,8 +4,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-
+from sklearn.metrics import classification_report
 # set_option pandas
 # pd.set_option('display.max_columns', 50)
 # pd.set_option('display.width', 1000)
@@ -27,16 +26,6 @@ clf = DecisionTreeClassifier()
 model = clf.fit(X_train, y_train)
 preds = model.predict(X_test)
 
-accuracy = accuracy_score(preds, y_test)
-precision = precision_score(preds, y_test)
-recall = recall_score(preds, y_test)
-f1_score = f1_score(preds, y_test)
+classification_report = classification_report(preds, y_test)
 
-dct = {'accuracy': [round(accuracy, 2)], 
-	   'precision': [round(precision, 2)], 
-	   'recall': [round(recall, 2)], 
-	   'f1_score': [round(f1_score, 2)]}
-metrics = pd.DataFrame(data=dct)
-
-print("=== Imbalance datasets ===")
-print(metrics)
+print(f"Classification Report: \n {classification_report}")
