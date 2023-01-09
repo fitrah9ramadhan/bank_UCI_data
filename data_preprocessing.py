@@ -46,7 +46,8 @@ new_df = remove_outliers(data=df, threshold=3)
 
 # Min Max Scaler for high Scaled Data
 numerical_col = [col for col in new_df.columns if ((new_df[col].dtype == 'float64') or (new_df[col]).dtype == 'int64')]
-to_scale_cols = [col for col in numerical_col if (len(new_df[col].unique()) >= len(new_df[col])*0.01)] # scale if the number of unique value is greater or equal than 1 percent of the length of the rows
+to_scale_cols = [col for col in numerical_col if (len(new_df[col].unique()) >= len(new_df[col])*0.001)] # scale if the number of unique value is greater or equal than 0.1 percent of the length of the rows
+
 
 scaler = MinMaxScaler()
 scaled = scaler.fit(new_df[to_scale_cols])
