@@ -14,26 +14,26 @@ Metadata: data/bank-names.txt
 
 # Logistic Regression, Decision Tree, Random Forest, Decision Tree, Gaussian Naive Bayes
 
-Logistic Regression : accuracy : 0.88__
-Logistic Regression : precision : 0.9__
-Logistic Regression : recall : 0.86__
-Logistic Regression : f1 score : 0.88__
-__
-Decision Tree Classifier : accuracy : 0.92__
-Decision Tree Classifier : precision : 0.91__
-Decision Tree Classifier : recall : 0.95__
-Decision Tree Classifier : f1 score : 0.93__
+Logistic Regression : accuracy : 0.88 <br />
+Logistic Regression : precision : 0.9 <br />
+Logistic Regression : recall : 0.86 <br />
+Logistic Regression : f1 score : 0.88 <br />
+<br />
+Decision Tree Classifier : accuracy : 0.92 <br />
+Decision Tree Classifier : precision : 0.91 <br />
+Decision Tree Classifier : recall : 0.95 <br />
+Decision Tree Classifier : f1 score : 0.93 <br />
 
-Random Forest Classifier : accuracy : 0.95__
-Random Forest Classifier : precision : 0.94__
-Random Forest Classifier : recall : 0.96__
-Random Forest Classifier : f1 score : 0.95__
+Random Forest Classifier : accuracy : 0.95 <br />
+Random Forest Classifier : precision : 0.94 <br />
+Random Forest Classifier : recall : 0.96 <br />
+Random Forest Classifier : f1 score : 0.95 <br />
 __
-Gaussian Naive Bayes : accuracy : 0.75__
-Gaussian Naive Bayes : precision : 0.71__
-Gaussian Naive Bayes : recall : 0.84__
-Gaussian Naive Bayes : f1 score : 0.77__
-
+Gaussian Naive Bayes : accuracy : 0.75 <br />
+Gaussian Naive Bayes : precision : 0.71 <br />
+Gaussian Naive Bayes : recall : 0.84 <br />
+Gaussian Naive Bayes : f1 score : 0.77 <br />
+<br />
 
 
 # Probabilistic Algorithm (Logistic Regression, Random Forest, Gaussian Naive Bayes)
