@@ -6,30 +6,41 @@ Metadata: data/bank-names.txt
 
 ---
 
-## Target Count
+# Target Count
 ![Imbalanced target!](/figure/number_of_by_y.png)
 
 # Ooops..!! Imbalanced target. Let's Use SMOTE!
-![Balanced Target!](/figure/y_after_smote.png)
+![Balanced Target!](/figure/number_of_by_y_after_SMOTE.png)
 
-# Using Logistic Regression
-|fold|   accuracy|  precision| recall  | f1     |
-|----|-----------|-----------|---------|-------|
-|0 | 0.802068   |0.978389  |0.617781|  0.757350|
-|1  |0.917229   |0.937049  |0.894555 | 0.915309|
-|2  |0.881185   |0.859483  |0.911371 | 0.884667|
-|3  |0.872010   |0.848238  |0.906121 | 0.876225|
-|4  |0.848852   |0.812855  |0.906409 | 0.857087|
-|----|-----------|-----------|---------|-------|
-|avg.|0.864269|0.887203|0.847248|0.858128|
+# Logistic Regression, Decision Tree, Random Forest, Decision Tree, Gaussian Naive Bayes
 
-# Using Decision Tree Classifier
-|fold |  accuracy | precision  |  recall   |     f1|
-|------|---------|-----------|---------|--------|
-|0  |0.751413   |0.751586  |0.751068 | 0.751327|
-|1  |0.810889   |0.733755  |0.975879 | 0.837672|
-|2  |0.806754   |0.728186  |0.978911 | 0.835136|
-|3  |0.775243   |0.695142  |0.980425 | 0.813497|
-|4  |0.625198   |0.572907  |0.984011 | 0.724183|
-|----|-----------|-----------|---------|-------|
-|avg.|0.753899|0.696315|0.934059|0.792363|
+Logistic Regression : accuracy : 0.88
+Logistic Regression : precision : 0.9
+Logistic Regression : recall : 0.86
+Logistic Regression : f1 score : 0.88
+=============================================
+Decision Tree Classifier : accuracy : 0.92
+Decision Tree Classifier : precision : 0.91
+Decision Tree Classifier : recall : 0.95
+Decision Tree Classifier : f1 score : 0.93
+=============================================
+Random Forest Classifier : accuracy : 0.95
+Random Forest Classifier : precision : 0.94
+Random Forest Classifier : recall : 0.96
+Random Forest Classifier : f1 score : 0.95
+=============================================
+Gaussian Naive Bayes : accuracy : 0.75
+Gaussian Naive Bayes : precision : 0.71
+Gaussian Naive Bayes : recall : 0.84
+Gaussian Naive Bayes : f1 score : 0.77
+=============================================
+
+
+# Probabilistic Algorithm (Logistic Regression, Random Forest, Gaussian Naive Bayes)
+
+## ROC Curve
+
+![ROC!](/figure/ROC_AUC_Score.png)
+
+
+## Good Job! Random Forest!!

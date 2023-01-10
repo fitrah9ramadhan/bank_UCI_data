@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 pd.set_option('display.max_columns', 50)
 pd.set_option('display.width', 1000)
 
-# load data
-df = pd.read_csv('data/bank-full.csv', delimiter=';')
+# # load data
+# df = pd.read_csv('data/bank-full.csv', delimiter=';')
 
 # # Exploratory Data Analysis
 # # age
@@ -95,10 +95,21 @@ df = pd.read_csv('data/bank-full.csv', delimiter=';')
 # plt.savefig("figure/balance_box_plot_many_outliers.png")
 # plt.show()
 
-print(df.describe())
+# print(df.describe())
 
-# Boxplot
-plt.subplots(figsize=(15,5))
-plt.boxplot(df['duration'], vert=0)
-plt.savefig("figure/duration_box_plot.png")
+# # Boxplot
+# plt.subplots(figsize=(15,5))
+# plt.boxplot(df['duration'], vert=0)
+# plt.savefig("figure/duration_box_plot.png")
+# plt.show()
+
+df_balanced = pd.read_csv("data/cleaned_data/bank-full-balanced.csv", index_col="Unnamed: 0")
+
+df_balanced['y'] = df_balanced['y'].map({0:'no', 1:'yes'})
+y_bar = df_balanced['y'].value_counts()
+
+plt.subplots(figsize=(10,5))
+plt.bar(x=y_bar.index, height=y_bar.values)
+plt.title('Number of Subscriber of Term Deposit after SMOTE \n (Campaign Target)')
+plt.savefig("figure/number_of_by_y_after_SMOTE.png")
 plt.show()
