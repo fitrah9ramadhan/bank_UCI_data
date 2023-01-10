@@ -51,7 +51,7 @@ rf_fpr, rf_tpr, threshold = roc_curve(y_test, rf_probs)
 nb_fpr, nb_tpr, threshold = roc_curve(y_test, nb_probs)
 
 
-plt.subplots(figsize=(10, 10))
+plt.subplots(figsize=(10, 5))
 
 plt.plot(lr_fpr, lr_tpr, label=f"Logistic Regression (AUC: {(round(lr_auc, 3))})")
 plt.plot(rf_fpr, rf_tpr, label=f"Random Forest Classifier (AUC: {(round(rf_auc, 3))})")

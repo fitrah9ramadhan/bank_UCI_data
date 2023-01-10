@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, classification_report
 
 #set_option pandas
 pd.set_option('display.max_columns', 50)
@@ -43,10 +43,15 @@ def print_score(model, X_train, X_test, y_train, y_test, model_name):
 	my_recall = recall_score(y_test, my_preds)
 	my_f1_score = f1_score(y_test, my_preds)
 
+	report = classification_report(y_test, my_preds)
+
 	print(f"{model_name} : accuracy : {round(my_accuracy, 2)}")
 	print(f"{model_name} : precision : {round(my_precision, 2)}")
 	print(f"{model_name} : recall : {round(my_recall, 2)}")
 	print(f"{model_name} : f1 score : {round(my_f1_score, 2)}")
+	print("=============================================")
+	print(f"Model Name: {model_name}")
+	print(report)
 	print("=============================================")
 
 
