@@ -23,12 +23,12 @@ Decision Tree Classifier : accuracy : 0.92 <br />
 Decision Tree Classifier : precision : 0.91 <br />
 Decision Tree Classifier : recall : 0.95 <br />
 Decision Tree Classifier : f1 score : 0.93 <br />
-
+<br />
 Random Forest Classifier : accuracy : 0.95 <br />
 Random Forest Classifier : precision : 0.94 <br />
 Random Forest Classifier : recall : 0.96 <br />
 Random Forest Classifier : f1 score : 0.95 <br />
-__
+<br />
 Gaussian Naive Bayes : accuracy : 0.75 <br />
 Gaussian Naive Bayes : precision : 0.71 <br />
 Gaussian Naive Bayes : recall : 0.84 <br />
